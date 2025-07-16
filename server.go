@@ -785,3 +785,7 @@ func (srv *Server) Ping() error {
 
 	return srv.broker.Ping()
 }
+
+func (srv *Server) QueueRemove(qname string, force bool) error {
+	return srv.broker.RemoveQueue(qname, force)
+}
